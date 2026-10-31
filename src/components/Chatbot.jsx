@@ -58,13 +58,29 @@ const Chatbot = () => {
         }),
       });
 
-      const data = await response.json();
+      const responseText = await response.text();
 
-      if (!response.ok) {
-        throw new Error(
-          data.error || "Chat service unavailable."
-        );
-      }
+let data;
+
+try {
+  data = responseText ? JSON.parse(responseText) : {};
+} catch {
+  throw new Error(
+    `Backend returned an invalid response (HTTP ${response.status}). Check Render logs.`
+  );
+}
+
+if (!response.ok) {
+  throw new Error(
+    data.error || `Chat service unavailable (HTTP ${response.status}).`
+  );
+}
+
+if (!data.reply) {
+  throw new Error(
+    data.error || "Backend did not return a reply. Check Render logs."
+  );
+}
 
       setMessages((prev) => [
         ...prev,
