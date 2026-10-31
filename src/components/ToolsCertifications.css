@@ -1,0 +1,294 @@
+/* ================================
+   TOOLS I USE
+================================ */
+
+.tools-section,
+.certifications-section {
+  position: relative;
+  padding: 110px 7% 100px;
+  background:
+    radial-gradient(
+      ellipse at 10% 20%,
+      rgba(var(--accent-rgb), 0.07),
+      transparent 42%
+    ),
+    #070510;
+  overflow: hidden;
+}
+
+.tools-container,
+.certifications-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.tools-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.tools-heading h2 {
+  margin: 17px 0 12px;
+  font-size: clamp(36px, 5vw, 53px);
+  font-weight: 850;
+  letter-spacing: -2px;
+  color: var(--text);
+}
+
+.tools-heading p {
+  max-width: 570px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tools-card {
+  padding: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 15px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.012)
+  );
+  transition: 0.3s ease;
+}
+
+.tools-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(var(--accent-rgb), 0.38);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.tools-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 21px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.tools-card-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.tools-card-icon.purple {
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.14);
+}
+
+.tools-card-icon.blue {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.14);
+}
+
+.tools-card-icon.green {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.13);
+}
+
+.tools-card-icon.orange {
+  color: #fb923c;
+  background: rgba(249, 115, 22, 0.13);
+}
+
+.tools-card-header h3 {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.tools-card-header p {
+  margin: 0;
+  color: #938da5;
+  font-size: 10px;
+}
+
+.tools-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tools-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #d4cde2;
+  font-size: 11px;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.tools-pill:hover {
+  border-color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+}
+
+.tools-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 9px var(--accent);
+}
+
+/* ================================
+   CERTIFICATIONS
+================================ */
+
+.certifications-section {
+  padding-top: 95px;
+  background:
+    radial-gradient(
+      ellipse at 90% 25%,
+      rgba(var(--accent-rgb), 0.07),
+      transparent 42%
+    ),
+    #080612;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.certificate-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 285px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.012)
+  );
+  transition: 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(var(--accent-rgb), 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
+}
+
+.certificate-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  border-radius: 12px;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
+}
+
+.certificate-label {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+}
+
+.certificate-card h3 {
+  margin: 0 0 18px;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.certificate-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 22px;
+  color: #938da5;
+  font-size: 11px;
+}
+
+.certificate-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding: 11px 14px;
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
+  border-radius: 8px;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: #f8f7ff;
+  font-size: 11px;
+  font-weight: 650;
+  transition: 0.25s ease;
+}
+
+.certificate-button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+  .tools-section,
+  .certifications-section {
+    padding: 90px 5%;
+  }
+
+  .tools-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .tools-section,
+  .certifications-section {
+    padding: 75px 6%;
+  }
+
+  .tools-heading {
+    margin-bottom: 38px;
+  }
+
+  .tools-card,
+  .certificate-card {
+    padding: 22px;
+  }
+
+  .tools-card-header h3 {
+    font-size: 13px;
+  }
+
+  .tools-pill {
+    padding: 9px 11px;
+    font-size: 10px;
+  }
+}
