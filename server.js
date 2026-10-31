@@ -2,10 +2,14 @@
 import express from "express";
 import dotenv from "dotenv";
 import rateLimit from "express-rate-limit";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+app.use(cors({
+  origin: "https://myportfolio-hxo2.onrender.com"
+}));
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json({ limit: "20kb" }));
